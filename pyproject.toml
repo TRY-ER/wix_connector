@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "wix-connector"
+version = "0.0.1"
+description = "used to connect to the wix using RESTAPI"
+authors = ["try-er <avyarth00@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
