@@ -6,7 +6,7 @@ authors = ["try-er <avyarth00@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.9,<4.0"
 pydantic = "^2.6.0"
 
 
