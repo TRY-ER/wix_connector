@@ -22,7 +22,7 @@ class BaseDataHandler(BaseModel, ABC):
         url = UpdateDataUrl
         response = self.client.put(url=url,
                          data=data,
-                         param=id)
+                         params=[id])
         return response
     
     def save_data(self, data:dict):
@@ -32,16 +32,16 @@ class BaseDataHandler(BaseModel, ABC):
                                     data=data)
         return response 
 
-    def get_data(self, id: str):
+    def get_data(self, table_name: str, id: str):
         url = GetDataUrl
         response = self.client.get(url=url,
-                                   param=id)
+                                   params=[id,table_name])
         return response
 
-    def remove_data(self, id: str):
+    def remove_data(self, table_name: str, id: str):
         url = RemoveDataUrl
         response = self.client.delete(url=url,
-                                      param=id)
+                                      params=[id, table_name])
         return response 
 
     def query_data(self, query_dict: dict):

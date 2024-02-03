@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class BaseUrl(BaseModel):
@@ -7,11 +8,12 @@ class BaseUrl(BaseModel):
     description: str = ""
     example: str = ""
 
-    def get_url(self,param: str | None = None):
+    def get_url(self,params: Optional[list] = None):
         try:
-            return self.url.format(param) if param else self.url
+            print("formatted url >>", {self.url.format(*params)} if params else self.url)
+            return self.url.format(*params) if params else self.url
         except Exception as e:
-            print(f"Exception in formatting param: {param}") 
+            print(f"Exception in formatting param: {params} , {e}") 
 
 
 

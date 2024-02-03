@@ -80,7 +80,7 @@ SaveDataUrl= BaseUrl(
 )
 
 GetDataUrl= BaseUrl(
- url="https://www.wixapis.com/wix-data/v2/items/{}",
+ url="https://www.wixapis.com/wix-data/v2/items/{}?dataCollectionId={}",
  description="""
    Retrieves an item from a collection. 
  """,
@@ -89,7 +89,7 @@ GetDataUrl= BaseUrl(
 )
 
 RemoveDataUrl= BaseUrl(
- url="https://www.wixapis.com/wix-data/v2/items/{}",
+ url="https://www.wixapis.com/wix-data/v2/items/{}?dataCollectionId={}",
  description="""
  Removes an item from a collection.
 
